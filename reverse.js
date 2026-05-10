@@ -1,16 +1,13 @@
-//reverse of a number.
+function reverseArray(arr) {
 
-//input from the user.
-const prompt = require("prompt-sync")();
-let num = Number(prompt("enter a number : "));
-
-//reverse of a number.
-let rev = 0;
-
-while (num!==0){
-
-let digit = num % 10;
-rev = rev *10 + digit; 
-num = Math.floor(num/10);
+    for(let i=0;i<arr.length/2;i++){
+        let temp = arr[i];
+        arr[i]=arr[arr.length-1-i];
+        arr[arr.length-1-i]=temp;
+    }
+return arr;
 }
-console.log("reverse of a number ="+rev);
+
+let arr = [1, 2, 3, 4, 5];
+
+console.log(reverseArray(arr));

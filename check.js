@@ -1,12 +1,11 @@
-//input a number from the user.
-const prompt = require("prompt-sync")();
-let num = Number(prompt("enter a number : "));
+function checkElement(arr, value) {
 
-//checking wheather a number is pos, neg or zero.
-if(num>0){
-    console.log(num + " number is positive");
-}else if(num<0){
-    console.log(num + " number is negative");
-}else{
-    console.log(num + " number is zero");
+    if(arr.includes(value)){
+        return "found";
+    }else{
+        return "not found";
+    }
+
 }
+
+console.log(checkElement([1,2,3,4], 3));
